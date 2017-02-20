@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Chapters/1/after crash.unity
+  isLoaded: 1
+  isActive: 1
