@@ -1,5 +1,6 @@
 This is a unity game which would be telling a story. it is ccurrently alpha.
 This game will be free to play and will use advertisment as a source of revenue.
+Feel free to try out the alpha build in the build folder
 #Disclaimer:
 I don't claim Traveler is good for anything -
 if you think it is, great, but it's up to you to decide.
