@@ -9,4 +9,6 @@ public class GunProperty : MonoBehaviour {
     public bool Automatic = false;
     public string Description = "Looks like and ordinary gun to me!";
     public int AmmoCount = 0;
+    public int Accuracy = 0;
+    public int RPCMode = 0;
 }

@@ -12,6 +12,7 @@ public class Player : MonoBehaviour {
     public float bulletDamage = 1f;
     public bool grounded = false;
     public bool isDead = false;
+    private bool playing = false;
     private Rigidbody2D rb2d;
     private Animator anim;
     private Animator healthanim;
@@ -20,11 +21,13 @@ public class Player : MonoBehaviour {
     public Camera camera;
     public GameObject UI;
     public float UIoffset = -7.598874f;
+    private AudioSource walk;
     // Use this for initialization
     void Start () {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = sprite.gameObject.GetComponent<Animator>();
         healthanim= healthsprite.gameObject.GetComponent<Animator>();
+        walk = this.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -55,9 +58,28 @@ public class Player : MonoBehaviour {
     {
         float h = 0;
         if (Input.GetAxis("Horizontal") != 0)
+        {
             h = Input.GetAxis("Horizontal");
+            if(grounded && !isDead)
+            {
+                if (!playing)
+                {
+                    walk.Play();
+                    playing = true;
+                }
+            }
+            else
+            {
+                walk.Stop();
+                playing = false;
+            }
+        }
         else
+        {
             rb2d.velocity = new Vector2(0, rb2d.velocity.y);
+            walk.Stop();
+            playing = false;
+        }
         rb2d.AddForce(Vector2.right*speed*h);
         if (rb2d.velocity.x > maxspeed)
             rb2d.velocity = new Vector2(maxspeed,rb2d.velocity.y);
