@@ -45,7 +45,7 @@ public class Player : MonoBehaviour {
             transform.localScale = new Vector3(-3, 3, 3);
             transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
         }
-        if (Input.GetButtonDown("Jump") && grounded)
+        if (Input.GetButtonDown("Jump") && grounded && !isDead)
             rb2d.AddForce(Vector2.up * jump);
         if (transform.localPosition.x >= 0)
         {
