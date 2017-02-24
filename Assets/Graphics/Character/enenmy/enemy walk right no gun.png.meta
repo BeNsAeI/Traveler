@@ -1,9 +1,25 @@
 fileFormatVersion: 2
 guid: 84dda971e588a6f48a0d5403e57cec4f
-timeCreated: 1487482849
+timeCreated: 1487901594
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: enemy walk right no gun_0
+    21300002: enemy walk right no gun_1
+    21300004: enemy walk right no gun_2
+    21300006: enemy walk right no gun_3
+    21300008: enemy walk right no gun_4
+    21300010: enemy walk right no gun_5
+    21300012: enemy walk right no gun_6
+    21300014: enemy walk right no gun_7
+    21300016: enemy walk right no gun_8
+    21300018: enemy walk right no gun_9
+    21300020: enemy walk right no gun_10
+    21300022: enemy walk right no gun_11
+    21300024: enemy walk right no gun_12
+    21300026: enemy walk right no gun_13
+    21300028: enemy walk right no gun_14
+    21300030: enemy walk right no gun_15
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -34,7 +50,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -58,9 +74,257 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Samsung TV
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: enemy walk right no gun_0
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 3069
+        width: 358
+        height: 998
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemy walk right no gun_1
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 3069
+        width: 390
+        height: 998
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemy walk right no gun_2
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 3069
+        width: 422
+        height: 998
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemy walk right no gun_3
+      rect:
+        serializedVersion: 2
+        x: 3357
+        y: 3069
+        width: 486
+        height: 998
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemy walk right no gun_4
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 2045
+        width: 422
+        height: 998
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemy walk right no gun_5
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 2045
+        width: 390
+        height: 998
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemy walk right no gun_6
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 2045
+        width: 358
+        height: 998
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemy walk right no gun_7
+      rect:
+        serializedVersion: 2
+        x: 3389
+        y: 2045
+        width: 358
+        height: 998
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemy walk right no gun_8
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 1021
+        width: 358
+        height: 998
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemy walk right no gun_9
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 1021
+        width: 390
+        height: 998
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemy walk right no gun_10
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 1021
+        width: 422
+        height: 998
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemy walk right no gun_11
+      rect:
+        serializedVersion: 2
+        x: 3357
+        y: 1021
+        width: 486
+        height: 998
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemy walk right no gun_12
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 0
+        width: 422
+        height: 995
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemy walk right no gun_13
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 0
+        width: 390
+        height: 995
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemy walk right no gun_14
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 0
+        width: 358
+        height: 995
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: enemy walk right no gun_15
+      rect:
+        serializedVersion: 2
+        x: 3389
+        y: 0
+        width: 358
+        height: 995
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

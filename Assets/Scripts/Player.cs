@@ -22,6 +22,7 @@ public class Player : MonoBehaviour {
     public GameObject UI;
     public float UIoffset = -7.598874f;
     private AudioSource walk;
+    public float x;
     // Use this for initialization
     void Start () {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
@@ -51,6 +52,7 @@ public class Player : MonoBehaviour {
         {
             camera.transform.localPosition = new Vector3(transform.localPosition.x, camera.transform.localPosition.y, camera.transform.localPosition.z);
             UI.transform.localPosition = new Vector3(camera.transform.localPosition.x+ UIoffset, UI.transform.localPosition.y, UI.transform.localPosition.z);
+            x = camera.transform.localPosition.x;
         }
         
     }

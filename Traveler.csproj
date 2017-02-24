@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\GunProperty.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\enemy.cs" />
     <Compile Include="Assets\Scripts\explosion.cs" />
     <Compile Include="Assets\Scripts\grass_hide.cs" />
     <Compile Include="Assets\Scripts\grass_shake.cs" />
