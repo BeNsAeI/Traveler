@@ -17,6 +17,8 @@ public class Menu : MonoBehaviour {
     public float shade = 1f;
     public float shadeRate = 0.01f;
     public float playerOffset = -5;
+    private AudioSource main0;
+    private AudioSource main1;
     // Use this for initialization
     void Start () {
         Player.gameObject.SetActive(false);
@@ -26,6 +28,8 @@ public class Menu : MonoBehaviour {
         screen.SetActive(true);
         screen.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, 1f);
         Deathscreen.SetActive(false);
+        main0 = this.GetComponent<AudioSource>();
+        main1 = PB.GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -51,6 +55,8 @@ public class Menu : MonoBehaviour {
             this.GetComponentInChildren<Camera>().enabled = false;
             if(shade > 0 && !Player.GetComponent<Player>().isDead)
                 shade = shade - shadeRate;
+            main0.volume = shade/2;
+            main1.volume = 0.5f - (shade / 2);
             screen.GetComponent<Renderer>().material.color = new Color(1f,1f,1f,shade);
             if (Input.GetKeyDown(KeyCode.Escape) && !Player.GetComponent<Player>().isDead)
                 menu = true;
@@ -59,6 +65,8 @@ public class Menu : MonoBehaviour {
         {
             if(shade < 1)
                 shade = shade + shadeRate;
+            main0.volume = shade/2;
+            main1.volume = 0.5f - (shade / 2);
             screen.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, shade);
             Player.gameObject.SetActive(false);
             Enemy.gameObject.SetActive(false);
