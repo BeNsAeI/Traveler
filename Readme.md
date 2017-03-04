@@ -7,7 +7,7 @@ Game development is time consuming and difficult. If you enjoyed this game pleas
 the development team.
 
 #Disclaimer:
-All assets used in this game are eiter royalty free or made by me myself. 
+All assets used in this game are either royalty free or made by me myself. 
 Music is made by Eric Skiff. at the time I obtained my copy of the music, 
 it was free available at http://ericskiff.com/music/ and licensed under 
 creative commons. As of 3/4/2017, the license states the following:
@@ -17,7 +17,7 @@ Licensing:
 All songs are released under a Creative Commons Attribution License, please feel free to use them in your projects, 
 games, podcasts, videos, or whatever you like, just be sure to let me know so I can link back to you!
 
-The owner was notified through his website of the use.
+The owner was notified through his website of the use. Go and visit his website! he is awesome.
 
 
 Traveler:
