@@ -8,14 +8,17 @@ public class grass_hide : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-            player.GetComponent<Renderer>().material.color = new Color(darkness, darkness, darkness);
+        player.GetComponent<Renderer>().material.color = new Color(darkness, darkness, darkness);
+        player.GetComponentInParent<Player>().isHidden = true;
     }
     void OnTriggerStay2D(Collider2D col)
     {
-            player.GetComponent<Renderer>().material.color = new Color(darkness, darkness, darkness);
+        player.GetComponent<Renderer>().material.color = new Color(darkness, darkness, darkness);
+        player.GetComponentInParent<Player>().isHidden = true;
     }
     void OnTriggerExit2D(Collider2D col)
     {
-            player.GetComponent<Renderer>().material.color = new Color(1, 1, 1);
+        player.GetComponent<Renderer>().material.color = new Color(1, 1, 1);
+        player.GetComponentInParent<Player>().isHidden = false;
     }
 }

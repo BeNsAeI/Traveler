@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour {
     public GameObject Player;
-    public GameObject Enemy;
     public bool menu = false;
     private Animator play;
     public GameObject PB;
@@ -15,14 +14,13 @@ public class Menu : MonoBehaviour {
     public GameObject screen;
     public GameObject Deathscreen;
     public float shade = 1f;
-    public float shadeRate = 0.01f;
+    public float shadeRate = 0.1f;
     public float playerOffset = -5;
     private AudioSource main0;
     private AudioSource main1;
     // Use this for initialization
     void Start () {
         Player.gameObject.SetActive(false);
-        Enemy.gameObject.SetActive(false);
         play = PB.gameObject.GetComponent<Animator>();
         stop = SB.gameObject.GetComponent<Animator>();
         screen.SetActive(true);
@@ -38,7 +36,7 @@ public class Menu : MonoBehaviour {
         if (Player.GetComponent <Player>().isDead)
         {
             if (shade < 1)
-                shade = shade + shadeRate/10;
+                shade = shade + shadeRate/2;
             screen.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, shade);
             if (shade >= 1)
             {
@@ -51,7 +49,6 @@ public class Menu : MonoBehaviour {
         if (!menu)
         {
             Player.gameObject.SetActive(true);
-            Enemy.gameObject.SetActive(true);
             this.GetComponentInChildren<Camera>().enabled = false;
             if(shade > 0 && !Player.GetComponent<Player>().isDead)
                 shade = shade - shadeRate;
@@ -69,7 +66,6 @@ public class Menu : MonoBehaviour {
             main1.volume = 0.5f - (shade / 2);
             screen.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, shade);
             Player.gameObject.SetActive(false);
-            Enemy.gameObject.SetActive(false);
             this.GetComponentInChildren<Camera>().enabled = true;
         }
         if(selectedPlay)

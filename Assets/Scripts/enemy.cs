@@ -21,15 +21,27 @@ public class enemy : MonoBehaviour {
     public float pos;
     public int flip = 1;
     public float offset = 1f;
+    public GameObject player;
+    public float RPM = 1;
+    public bool shot = false;
+    public bool shooting = false;
+    public float shotWait = 0f;
     void Start()
     {
         walk = this.GetComponent<AudioSource>();
         anim = sprite.GetComponent<Animator>();
         pos = transform.localPosition.x;
         gun.gameObject.SetActive(false);
+        this.GetComponentInChildren<Collider2D>();
+        if (Random.Range(0f, 1f) >= 0.5)
+            flip = 1;
+        else
+            flip = -1;
+        
     }
 
     // Update is called once per frame
+    
     void Update()
     {
         if (transform.localPosition.x >= pos + 5 && flip > 0)
@@ -104,5 +116,48 @@ public class enemy : MonoBehaviour {
             anim.SetBool("isDead", isDead);
             speed = 0;
         }
+    }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "detect" && !col.GetComponentInParent<Player>().isHidden && !col.GetComponentInParent<Player>().isDead)
+        {
+            isShooting = true;
+            shot = true;
+        }
+    }
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.tag == "detect" && !col.GetComponentInParent<Player>().isHidden)
+        {
+            isShooting = true;
+            Debug.Log("->"+ !col.GetComponentInParent<Player>().isDead);
+            if (!shot)
+            {
+                if (!col.GetComponentInParent<Player>().isDead)
+                {
+                    Debug.Log("Bang!");
+                    if(!this.GetComponentInChildren<AudioSource>().isPlaying)
+                        this.GetComponentInChildren<AudioSource>().Play();
+                    col.GetComponentInParent<Player>().health = col.GetComponentInParent<Player>().health - (col.GetComponentInParent<Player>().bulletDamage);
+                    shot = true;
+                }
+            }else
+            {
+                if(shotWait >= RPM)
+                {
+                    shot = false;
+                    shotWait = 0;
+                }
+                else
+                {
+                    shotWait =   shotWait + (0.05f / RPM);
+                }
+            }
+        }
+    }
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.tag == "detect")
+            isShooting = false;
     }
 }

@@ -23,6 +23,8 @@ public class Player : MonoBehaviour {
     public float UIoffset = -7.598874f;
     private AudioSource walk;
     public float x;
+    public bool isHidden = false;
+    public bool Active = false;
     // Use this for initialization
     void Start () {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
